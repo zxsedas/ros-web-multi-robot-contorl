@@ -64,6 +64,7 @@
         box-shadow: 0px 0px 40px black;
         padding: 20px 0px;
         position: fixed;
+        z-index: 5;
         bottom: 46px;
     }
     .robot_title{

@@ -7,7 +7,7 @@
 
 
 <script>
-    import { Base64 } from 'js-base64'
+    //import { Base64 } from 'js-base64'
     import io from "socket.io-client"
    export default {
     props:['ros','ROSLIB','view_id'],
@@ -15,15 +15,11 @@
         return {
             imgSrc: null,
             raw: '',
-            can: document.createElement("canvas"),
-            imgSrv: null,
-            imgUpdateId: null,
-            imgFps: 200,
         }
     },
     methods:{
         connect(){
-            this.socketInstance = io("http://localhost:8000")
+            this.socketInstance = io("http://60.60.0.2:8000")
             this.socketInstance.on(`img${this.view_id}`,(data)=>{
                 this.imgSrc = "data:image/jpg;base64," + data
             })

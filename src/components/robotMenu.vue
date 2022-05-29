@@ -113,6 +113,7 @@ export default {
 .menu {
     display: flex;
     position: fixed;
+    z-index: 10;
     bottom: 0;
     background-color: rgb(19, 77, 110);
     width: 100%;
